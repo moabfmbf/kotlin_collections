@@ -7,11 +7,19 @@ fun main() {
     salarios[2] = 120.5
     salarios[3] = 180.5
     salarios[4] = 1990.5
+    /*
     salarios.forEach {
         println(it)
     }
-    salarios.forEach {novoSalarios->
+    */
+    salarios.forEach { novoSalarios ->
         println(novoSalarios)
     }
 
+    salarios.forEachIndexed { index, salario ->
+        salarios[index] = salario * 1.1
+    }
+    salarios.forEach { novoSalarios ->
+        println(novoSalarios)
+    }
 }
